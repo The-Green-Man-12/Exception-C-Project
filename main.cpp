@@ -21,7 +21,6 @@ int main() {
             } else {
                 cout << "Unknown error." << endl;
             }
-            // loop again
         }
     }
     cout << "Your file contains the following lines: " << endl;
@@ -29,13 +28,6 @@ int main() {
     cout << "Program finished." << endl;
     return 0;
 }
-
-struct FileError : runtime_error {
-    int error_code;
-    FileError(int code, const string& message) : runtime_error(message), error_code(code) {
-    }
-    
-};
 
 vector<std::string> readFile(string& filename) {
     vector<string> lines;
